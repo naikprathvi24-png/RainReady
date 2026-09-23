@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RainReady - Smart Rainwater Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= LOGIN ================= -->
+
+<section
+    class="login-page"
+    id="loginPage"
+>
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            🌧️
+        </div>
+
+        <h1>
+            Welcome to <span>RainReady</span>
+        </h1>
+
+        <p class="login-subtitle">
+            Smart planning for every drop of rain.
+        </p>
+
+
+        <!-- ================= LOGIN FORM ================= -->
+
+        <div id="loginFormContainer">
+
+            <form onsubmit="loginUser(event)">
+
+                <div class="login-input">
+
+                    <label>👤 Name</label>
+
+                    <input
+                        type="text"
+                        id="loginName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-input">
+
+                    <label>📧 Email</label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-input">
+
+                    <label>🔒 Password</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Enter RainReady →
+                </button>
+
+            </form>
+
+
+            <p style="margin-top: 18px; text-align: center;">
+
+                Don't have an account?
+
+                <a
+                    href="#"
+                    onclick="showCreateAccount(); return false;"
+                    style="color: #168aad; font-weight: 600;"
+                >
+                    Create Account
+                </a>
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= CREATE ACCOUNT FORM ================= -->
+
+        <div
+            id="createAccountContainer"
+            style="display: none;"
+        >
+
+            <h2 style="text-align: center; margin-bottom: 20px;">
+                Create Your Account
+            </h2>
+
+
+            <form onsubmit="createAccount(event)">
+
+                <div class="login-input">
+
+                    <label>👤 Name</label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-input">
+
+                    <label>📧 Email</label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-input">
+
+                    <label>🔒 Password</label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-input">
+
+                    <label>🔒 Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="registerConfirmPassword"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Create Account →
+                </button>
+
+            </form>
+
+
+            <p style="margin-top: 18px; text-align: center;">
+
+                Already have an account?
+
+                <a
+                    href="#"
+                    onclick="showLogin(); return false;"
+                    style="color: #168aad; font-weight: 600;"
+                >
+                    Back to Login
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <p class="login-note">
+            🌱 Plan your rainwater. Save your water.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN WEBSITE ================= -->
+
+<div
+    id="mainWebsite"
+    style="display: none;"
+>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        🌧️ RainReady
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#planner">Planner</a>
+
+        <a href="#about">About</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-text">
+
+        <p class="small-title">
+            SMART WATER • SMART FUTURE
+        </p>
+
+
+        <h1>
+            Turn Rainfall<br>
+            Into <span>Water Wealth.</span>
+        </h1>
+
+
+        <p class="description">
+
+            RainReady helps you estimate how much
+            rainwater your roof can collect and shows
+            practical ways to use every drop.
+
+        </p>
+
+
+        <a
+            href="#planner"
+            class="start-btn"
+        >
+            Start Planning ↓
+        </a>
+
+    </div>
+
+
+
+    <div class="hero-card">
+
+        <div class="rain-icon">
+            🌧️
+        </div>
+
+        <h2>
+            Every Drop Counts
+        </h2>
+
+        <p>
+            Collect rain today.<br>
+            Save water tomorrow.
+        </p>
+
+        <div class="water-drop">
+            💧
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PLANNER ================= -->
+
+<section
+    class="planner"
+    id="planner"
+>
+
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            RAINWATER CALCULATOR
+        </p>
+
+
+        <h2>
+            Discover Your<br>
+            <span>Rainwater Potential</span>
+        </h2>
+
+
+        <p>
+            Select your location and enter your roof area.
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= CALCULATOR ================= -->
+
+    <div class="calculator">
+
+
+        <!-- ROOF AREA -->
+
+        <div class="input-box">
+
+            <label>
+                🏠 Roof Area
+            </label>
+
+
+            <input
+                type="number"
+                id="roofArea"
+                placeholder="Example: 100"
+                min="1"
+            >
+
+
+            <span>
+                square metres (m²)
+            </span>
+
+        </div>
+
+
+
+        <!-- LOCATION -->
+
+        <div class="input-box">
+
+            <label>
+                📍 Location
+            </label>
+
+
+            <select id="location">
+
+                <option value="">
+                    -- Select Location --
+                </option>
+
+
+                <!-- SHIVAMOGGA -->
+
+                <option value="shivamogga">
+                    Shivamogga
+                </option>
+
+                <option value="sagara">
+                    Sagara
+                </option>
+
+                <option value="thirthahalli">
+                    Thirthahalli
+                </option>
+
+                <option value="sorab">
+                    Sorab
+                </option>
+
+                <option value="bhadravati">
+                    Bhadravati
+                </option>
+
+                <option value="shikaripura">
+                    Shikaripura
+                </option>
+
+
+                <!-- UTTARA KANNADA -->
+
+                <option value="bhatkal">
+                    Bhatkal
+                </option>
+
+                <option value="sirsi">
+                    Sirsi
+                </option>
+
+                <option value="siddapur">
+                    Siddapur
+                </option>
+
+                <option value="honnavar">
+                    Honnavar
+                </option>
+
+                <option value="kumta">
+                    Kumta
+                </option>
+
+                <option value="karwar">
+                    Karwar
+                </option>
+
+                <option value="ankola">
+                    Ankola
+                </option>
+
+                <option value="yellapur">
+                    Yellapur
+                </option>
+
+                <option value="joida">
+                    Joida
+                </option>
+
+
+                <!-- COASTAL KARNATAKA -->
+
+                <option value="mangaluru">
+                    Mangaluru
+                </option>
+
+                <option value="udupi">
+                    Udupi
+                </option>
+
+                <option value="kundapura">
+                    Kundapura
+                </option>
+
+                <option value="karkala">
+                    Karkala
+                </option>
+
+
+                <!-- MALNAD -->
+
+                <option value="chikkamagaluru">
+                    Chikkamagaluru
+                </option>
+
+                <option value="mudigere">
+                    Mudigere
+                </option>
+
+                <option value="koppa">
+                    Koppa
+                </option>
+
+                <option value="sringeri">
+                    Sringeri
+                </option>
+
+                <option value="sakleshpur">
+                    Sakleshpur
+                </option>
+
+                <option value="hassan">
+                    Hassan
+                </option>
+
+
+                <!-- BENGALURU REGION -->
+
+                <option value="bengaluru">
+                    Bengaluru
+                </option>
+
+                <option value="tumakuru">
+                    Tumakuru
+                </option>
+
+                <option value="ramanagara">
+                    Ramanagara
+                </option>
+
+                <option value="kolar">
+                    Kolar
+                </option>
+
+
+                <!-- MYSURU REGION -->
+
+                <option value="mysuru">
+                    Mysuru
+                </option>
+
+                <option value="mandya">
+                    Mandya
+                </option>
+
+                <option value="chamarajanagar">
+                    Chamarajanagar
+                </option>
+
+
+                <!-- CENTRAL KARNATAKA -->
+
+                <option value="hubballi">
+                    Hubballi
+                </option>
+
+                <option value="dharwad">
+                    Dharwad
+                </option>
+
+                <option value="gadag">
+                    Gadag
+                </option>
+
+                <option value="haveri">
+                    Haveri
+                </option>
+
+                <option value="davanagere">
+                    Davanagere
+                </option>
+
+                <option value="chitradurga">
+                    Chitradurga
+                </option>
+
+
+                <!-- NORTH KARNATAKA -->
+
+                <option value="belagavi">
+                    Belagavi
+                </option>
+
+                <option value="bagalkot">
+                    Bagalkot
+                </option>
+
+                <option value="vijayapura">
+                    Vijayapura
+                </option>
+
+                <option value="ballari">
+                    Ballari
+                </option>
+
+                <option value="raichur">
+                    Raichur
+                </option>
+
+                <option value="yadgir">
+                    Yadgir
+                </option>
+
+                <option value="kalaburagi">
+                    Kalaburagi
+                </option>
+
+                <option value="bidar">
+                    Bidar
+                </option>
+
+
+                <!-- KODAGU -->
+
+                <option value="kodagu">
+                    Kodagu
+                </option>
+
+                <option value="madikeri">
+                    Madikeri
+                </option>
+
+            </select>
+
+
+            <span>
+                Select your city
+            </span>
+
+        </div>
+
+
+
+        <!-- RAINFALL -->
+
+        <div class="input-box">
+
+            <label>
+                🌧️ Rainfall
+            </label>
+
+
+            <input
+             type="text"
+             id="rainfall"
+             placeholder="Automatically detected"
+             readonly
+             
+        >
+
+
+          <span>
+               rainfall during previous 365 days (mm)
+          </span>
+
+        </div>
+
+
+
+        <!-- WEATHER BUTTON -->
+
+        <button
+            type="button"
+            class="weather-btn"
+            onclick="getRainfall()"
+        >
+
+            🌦️ Get Rainfall Data
+
+        </button>
+
+
+
+        <!-- CALCULATE BUTTON -->
+
+        <button
+            type="button"
+            onclick="calculateWater()"
+        >
+
+            💧 Calculate My Water
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- WEATHER STATUS -->
+
+    <div
+        class="weather-status"
+        id="weatherStatus"
+    >
+
+        📍 Select a location to get rainfall data.
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div
+        class="result-box"
+        id="result"
+    >
+
+        <div class="result-icon">
+            💧
+        </div>
+
+
+        <div>
+
+            <p>
+                Estimated Annual Rainwater Collection
+            </p>
+
+
+            <h2 id="waterResult">
+                0 Litres
+            </h2>
+
+
+            <span id="resultMessage">
+                Enter your roof area and select a location.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RECOMMENDATIONS ================= -->
+
+<section
+    class="recommendations"
+    id="recommendations"
+>
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            SMART WATER GUIDE
+        </p>
+
+
+        <h2>
+            What Can You Do With<br>
+            <span>Your Collected Rainwater?</span>
+        </h2>
+
+
+        <p>
+            RainReady suggests practical ways
+            to use collected rainwater.
+        </p>
+
+    </div>
+
+
+
+    <div class="recommendation-grid">
+
+    <div class="recommendation-card"
+         onclick="openRecommendation('gardening')">
+
+        <div class="recommendation-icon">🌱</div>
+
+        <h3>Gardening</h3>
+
+        <p>
+            Use collected rainwater for plants, trees,
+            flowers and kitchen gardens.
+        </p>
+
+    </div>
+
+
+    <div class="recommendation-card"
+         onclick="openRecommendation('cleaning')">
+
+        <div class="recommendation-icon">🧹</div>
+
+        <h3>Cleaning</h3>
+
+        <p>
+            Use rainwater for floor cleaning, outdoor
+            cleaning and other non-drinking purposes.
+        </p>
+
+    </div>
+
+
+    <div class="recommendation-card"
+         onclick="openRecommendation('vehicle')">
+
+        <div class="recommendation-icon">🚗</div>
+
+        <h3>Vehicle Washing</h3>
+
+        <p>
+            Use stored rainwater for washing cars,
+            bikes and other vehicles.
+        </p>
+
+    </div>
+
+
+    <div class="recommendation-card"
+         onclick="openRecommendation('toilet')">
+
+        <div class="recommendation-icon">🚽</div>
+
+        <h3>Toilet Flushing</h3>
+
+        <p>
+            Properly stored and treated rainwater can
+            reduce fresh water use.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            📊
+        </div>
+
+        <h3>
+            Smart Calculation
+        </h3>
+
+        <p>
+            Estimate annual rainwater collection
+            using roof area and rainfall.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🌧️
+        </div>
+
+        <h3>
+            Location Based
+        </h3>
+
+        <p>
+            RainReady provides rainfall data
+            based on the selected location.
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💚
+        </div>
+
+        <h3>
+            Save Water
+        </h3>
+
+        <p>
+            Reduce dependence on fresh water
+            and make every rainfall more valuable.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <p class="small-title">
+        ABOUT RAINREADY
+    </p>
+
+
+    <h2>
+        A Small Idea With<br>
+        <span>A Big Impact.</span>
+    </h2>
+
+
+    <p>
+        RainReady is a student-friendly rainwater
+        planning website designed to help people
+        understand the value of rainwater harvesting.
+    </p>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        🌧️ RainReady
+    </h3>
+
+
+    <p>
+        Collect Rain • Save Water • Build a Better Future
+    </p>
+
+
+    <p class="copyright">
+        © 2026 RainReady Mini Project
+    </p>
+
+</footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
+<!-- =========================================================
+     RAINREADY RECOMMENDATION POPUP
+     ========================================================= -->
+
+<div id="recommendationModal" class="recommendation-modal">
+
+    <div class="recommendation-modal-content">
+
+        <button
+            class="recommendation-close"
+            onclick="closeRecommendation()">
+            ×
+        </button>
+
+        <div
+            id="recommendationModalIcon"
+            class="modal-icon">
+            🌱
+        </div>
+
+        <h2 id="recommendationModalTitle">
+            Gardening
+        </h2>
+
+        <p id="recommendationModalDescription">
+            Rainwater can be used for gardening.
+        </p>
+
+        <h3>Benefits</h3>
+
+        <ul id="recommendationModalBenefits">
+        </ul>
+
+        <div class="recommendation-tip">
+
+            <strong>💡 Tip</strong>
+
+            <p id="recommendationModalTip">
+                Keep stored rainwater clean and covered.
+            </p>
+
+        </div>
+
+        <button
+            class="modal-close-button"
+            onclick="closeRecommendation()">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

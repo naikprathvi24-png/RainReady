@@ -1,0 +1,941 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3fbff;
+    color: #12343b;
+}
+
+
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #e9faff, #ffffff);
+}
+
+.login-card {
+    width: 420px;
+    background: white;
+    padding: 45px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.login-logo {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.login-card h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 span {
+    color: #168aad;
+}
+
+.login-subtitle {
+    color: #66858c;
+    margin-bottom: 30px;
+}
+
+.login-input {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-input input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d5eaf0;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-input input:focus {
+    border-color: #168aad;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #168aad;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #0d5c75;
+    transform: translateY(-2px);
+}
+
+.login-note {
+    margin-top: 25px;
+    color: #78949a;
+    font-size: 13px;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #12343b;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #168aad;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #e9faff, #ffffff);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #168aad;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.section-heading span,
+.about span {
+    color: #168aad;
+}
+
+.description {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #52727a;
+    margin-bottom: 35px;
+}
+
+.start-btn {
+    display: inline-block;
+    background: #168aad;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #0d5c75;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO CARD
+   ========================= */
+
+.hero-card {
+    width: 330px;
+    height: 380px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rain-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.hero-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #66858c;
+    line-height: 1.6;
+}
+
+.water-drop {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   PLANNER
+   ========================= */
+
+.planner {
+    padding: 90px 8%;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #66858c;
+    font-size: 17px;
+}
+
+
+/* =========================
+   CALCULATOR
+   ========================= */
+
+.calculator {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 25px;
+    background: #f3fbff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    padding: 15px;
+    border: 2px solid #d5eaf0;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #168aad;
+}
+
+.input-box span {
+    color: #78949a;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+
+/* =========================
+   CALCULATOR BUTTONS
+   ========================= */
+
+.calculator button {
+    padding: 16px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Weather Button */
+
+.weather-btn {
+    grid-column: 1 / 3;
+    background: #35a7d8 !important;
+}
+
+.weather-btn:hover {
+    background: #168aad !important;
+    transform: translateY(-2px);
+}
+
+
+/* Calculate Button */
+
+.calculator button:not(.weather-btn) {
+    grid-column: 1 / 3;
+    background: #168aad;
+}
+
+.calculator button:not(.weather-btn):hover {
+    background: #0d5c75;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   WEATHER STATUS
+   ========================= */
+
+.weather-status {
+    max-width: 900px;
+    margin: 25px auto 0;
+
+    padding: 18px 25px;
+
+    border-radius: 15px;
+
+    background: #eefaff;
+
+    border-left: 5px solid #168aad;
+
+    color: #52727a;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================
+   RESULT
+   ========================= */
+
+.result-box {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 30px;
+    border-radius: 22px;
+    background: #e8f8f2;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.result-box p {
+    color: #54736d;
+    margin-bottom: 5px;
+}
+
+.result-box h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.result-box span {
+    color: #52727a;
+}
+
+
+/* =========================
+   SMART RECOMMENDATIONS
+   ========================= */
+
+.recommendations {
+    padding: 90px 8%;
+    background: #f7fcff;
+}
+
+.recommendation-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.recommendation-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-8px);
+}
+
+.recommendation-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.recommendation-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.recommendation-card p {
+    color: #66858c;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.features {
+    padding: 90px 8%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    background: #eefaff;
+}
+
+.feature {
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #66858c;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about {
+    padding: 100px 20%;
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    margin-bottom: 25px;
+}
+
+.about > p:last-child {
+    max-width: 700px;
+    margin: auto;
+    color: #66858c;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #12343b;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #c6e3e8;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .recommendation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-card {
+        width: 280px;
+        height: 330px;
+    }
+
+    .calculator {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-btn,
+    .calculator button:not(.weather-btn) {
+        grid-column: 1;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 70px 8%;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 35px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .login-card h1 {
+        font-size: 25px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .calculator {
+        padding: 25px 20px;
+    }
+
+    .result-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+```css
+/* =========================================================
+   REAL WEATHER API STATUS
+   ========================================================= */
+
+.weather-status strong {
+    color: #168aad;
+}
+
+
+/* =========================================================
+   REAL WEATHER DATA RESULT
+   ========================================================= */
+
+.weather-status {
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   CALCULATION RESULT
+   ========================================================= */
+
+.result-box {
+    transition: 0.3s ease;
+}
+
+.result-box h2 {
+    color: #12343b;
+}
+
+
+/* =========================================================
+   MOBILE WEATHER STATUS
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .weather-status {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 16px;
+        font-size: 14px;
+    }
+
+}
+```
+/* =========================================================
+   CLICKABLE RECOMMENDATION CARDS
+   ========================================================= */
+
+.recommendation-card {
+    cursor: pointer;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.recommendation-card:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   RECOMMENDATION POPUP
+   ========================================================= */
+
+.recommendation-modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+.recommendation-modal-content {
+
+    position: relative;
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation: recommendationPopup 0.25s ease;
+}
+
+
+@keyframes recommendationPopup {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.recommendation-close {
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+.recommendation-close:hover {
+    color: #12343b;
+}
+
+
+.modal-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.recommendation-modal-content h2 {
+
+    margin-top: 5px;
+
+    margin-bottom: 15px;
+
+    color: #12343b;
+
+    font-size: 28px;
+}
+
+
+.recommendation-modal-content > p {
+
+    color: #527080;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+.recommendation-modal-content h3 {
+
+    color: #12343b;
+
+    margin-bottom: 10px;
+}
+
+
+.recommendation-modal-content ul {
+
+    text-align: left;
+
+    margin: 0 auto 20px;
+
+    max-width: 400px;
+
+    padding-left: 25px;
+}
+
+
+.recommendation-modal-content li {
+
+    color: #527080;
+
+    margin-bottom: 8px;
+
+    line-height: 1.5;
+}
+
+
+.recommendation-tip {
+
+    background: #eef9f6;
+
+    border-radius: 15px;
+
+    padding: 15px 18px;
+
+    margin-top: 15px;
+
+    text-align: left;
+}
+
+
+.recommendation-tip strong {
+    color: #168aad;
+}
+
+
+.recommendation-tip p {
+
+    color: #527080;
+
+    margin: 8px 0 0;
+
+    line-height: 1.5;
+}
+
+
+.modal-close-button {
+
+    margin-top: 20px;
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #168aad;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.modal-close-button:hover {
+    background: #12343b;
+}
