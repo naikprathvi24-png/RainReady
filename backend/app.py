@@ -12,7 +12,11 @@ from datetime import date, timedelta
 # Historical Rainfall        : NASA POWER
 # ============================================================
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder="../frontend",
+    static_url_path=""
+)
 
 CORS(app)
 
@@ -116,24 +120,9 @@ def get_json_from_api(url, params):
 # ============================================================
 # HOME
 # ============================================================
-
 @app.route("/")
 def home():
-
-    return jsonify({
-
-        "project": "RainReady",
-
-        "status": "running",
-
-        "backend": "Python Flask",
-
-        "weather_provider": "Open-Meteo",
-
-        "rainfall_provider": "NASA POWER"
-
-    })
-
+    return app.send_static_file("index.html")
 
 # ============================================================
 # HEALTH CHECK
